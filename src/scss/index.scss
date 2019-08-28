@@ -1,0 +1,101 @@
+@import 'custom';
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+@import '~bootstrap/scss/bootstrap';
+
+@mixin height-100vh{
+    height: 100vh;
+}
+
+.navbar{
+    z-index: 2;
+}
+
+#cover {
+    background: url(../img/cover.jpg) top center no-repeat;
+    background-size: cover;
+    color: map-get($colors , background-w );
+    @include height-100vh;
+    width: $full-width;
+    display: flex;
+    align-items: center; 
+}
+  
+#cover-caption {
+    font-size: 1.4rem;
+    max-width: 60rem;
+    margin: 10% auto 0;
+    .down-arrow {
+        font-size: 4rem;
+    }    
+}
+
+.down-arrow:hover{
+    text-decoration: none;
+}
+
+.navbar{
+    font-size: 1.35rem;
+}
+
+.container-fluid{
+    padding: $zero-padding; 
+}
+
+.card-deck{
+    background-color: map-get($colors , background-b );
+    padding:$uniform-padding;
+    margin: $zero-margin;
+}
+
+.card img:hover{
+    transform : scale(1.05);
+    background: rgba(0, 0, 0, 0.71);
+    box-shadow: 4px 4px 4px 4px white;
+}
+
+#c1{
+    background-image: url('../img/carousel_1.jpg');
+}
+#c2{
+    background-image: url('../img/Drummer.jpg');
+}
+#c3{
+    background-image: url('../img/chester.jpg');
+}
+#c4{
+    background-image: url('../img/another_1.jpg');
+}
+#c5{
+    background-image: url('../img/another_2.jpg');
+}
+#c6{
+    background-image: url('../img/another_3.jpg');
+}
+
+.carousel{
+    background: map-get($colors , background-b );
+    .carousel-item {
+        @include height-100vh;
+        // min-height: 300px;
+        background: no-repeat center center scroll;
+        background-size: cover;
+    }
+}
+
+.about-section {
+    padding: 5rem 0;
+    background-color:map-get($colors , background-b); 
+    .featured-text {
+      padding: 2rem;
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+  
+.sticky + .jumbotron-fluid {
+    padding-top: 30px;
+}
